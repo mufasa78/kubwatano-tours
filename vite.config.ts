@@ -22,5 +22,20 @@ export default defineConfig({
   server: {
     // @ts-ignore
     allowedHosts: true,
-  }
+    historyApiFallback: true,
+  },
+  preview: {
+    port: 4173,
+    strictPort: true,
+  },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+        },
+      },
+    },
+  },
 });

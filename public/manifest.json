@@ -1,0 +1,26 @@
+{
+  "name": "Kubwa Tano Tours - Luxury Safari Adventures",
+  "short_name": "Kubwa Tano Tours",
+  "description": "Experience luxury safari adventures in Kenya with expert guides and premium accommodations.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#5c0811",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/safarit.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/safari.ico",
+      "sizes": "32x32",
+      "type": "image/x-icon"
+    }
+  ],
+  "categories": ["travel", "tourism", "lifestyle"],
+  "lang": "en",
+  "dir": "ltr"
+}
