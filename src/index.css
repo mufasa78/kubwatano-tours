@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Import mobile-responsive utilities */
+@import './styles/mobile-responsive.css';
+
 /* Performance optimizations */
 
 /* Enable hardware acceleration for smooth animations */

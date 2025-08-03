@@ -30,7 +30,7 @@ const HomePage = () => {
       <HeroSection />
 
       {/* About Section */}
-      <section className="py-20 px-4 sm:px-6 md:px-8 lg:px-16 bg-gradient-to-br from-stone-50 to-amber-50 relative overflow-hidden">
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 lg:px-16 bg-gradient-to-br from-stone-50 to-amber-50 relative overflow-hidden">
         {/* Background decoration */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <div className="absolute top-20 left-10 w-32 h-32 bg-[#5c0811] rounded-full blur-3xl"></div>
@@ -38,10 +38,10 @@ const HomePage = () => {
         </div>
         
         <div className="max-w-7xl mx-auto relative">
-          <div className="flex flex-col lg:flex-row items-center gap-16">
-            <AnimatedSection className="lg:w-1/2 space-y-8" direction="left">
+          <div className="flex flex-col lg:flex-row items-center gap-8 sm:gap-12 lg:gap-16">
+            <AnimatedSection className="lg:w-1/2 space-y-6 sm:space-y-8" direction="left">
               <motion.h2 
-                className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#5c0811] leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#5c0811] leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -51,7 +51,7 @@ const HomePage = () => {
               </motion.h2>
               <Separator variant="gradient" />
               <motion.p 
-                className="text-gray-700 text-lg leading-relaxed"
+                className="text-gray-700 text-base sm:text-lg leading-relaxed"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -76,7 +76,7 @@ const HomePage = () => {
                 East Africa.
               </motion.p>
               <motion.div 
-                className="grid grid-cols-2 gap-8 py-8"
+                className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 py-6 sm:py-8"
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
@@ -87,8 +87,8 @@ const HomePage = () => {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="text-4xl font-bold text-[#5c0811] group-hover:text-amber-600 transition-colors duration-300">500+</div>
-                  <div className="text-gray-600 font-medium">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#5c0811] group-hover:text-amber-600 transition-colors duration-300">500+</div>
+                  <div className="text-sm sm:text-base text-gray-600 font-medium">
                     Happy Travelers
                   </div>
                 </motion.div>
@@ -97,8 +97,8 @@ const HomePage = () => {
                   whileHover={{ scale: 1.05 }}
                   transition={{ type: "spring", stiffness: 300 }}
                 >
-                  <div className="text-4xl font-bold text-[#5c0811] group-hover:text-amber-600 transition-colors duration-300">15+</div>
-                  <div className="text-gray-600 font-medium">
+                  <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#5c0811] group-hover:text-amber-600 transition-colors duration-300">15+</div>
+                  <div className="text-sm sm:text-base text-gray-600 font-medium">
                     Years Experience
                   </div>
                 </motion.div>
@@ -147,7 +147,7 @@ const HomePage = () => {
       </section>
 
       {/* Tour Packages Section */}
-      <section data-section="tour-packages" className="py-24 px-4 sm:px-6 md:px-8 lg:px-16 bg-white relative">
+      <section data-section="tour-packages" className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 md:px-8 lg:px-16 bg-white relative">
         {/* Background pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-[#5c0811] rounded-full"></div>
@@ -157,9 +157,9 @@ const HomePage = () => {
         </div>
         
         <div className="max-w-7xl mx-auto relative">
-          <AnimatedSection className="text-center mb-20">
+          <AnimatedSection className="text-center mb-12 sm:mb-16 lg:mb-20">
             <motion.h2 
-              className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#5c0811] mb-8"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-[#5c0811] mb-6 sm:mb-8"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -308,10 +308,10 @@ const HomePage = () => {
       </section>
 
       {/* Contact Section */}
-      <section data-section="contact" className="py-16 px-4 md:px-8 lg:px-16">
+      <section data-section="contact" className="py-12 sm:py-16 px-4 sm:px-6 md:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-[#5c0811] mb-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#5c0811] mb-3 sm:mb-4">
               Contact Us
             </h2>
             <p className="text-gray-700 max-w-3xl mx-auto">
@@ -319,7 +319,7 @@ const HomePage = () => {
               safari? Get in touch with our team.
             </p>
           </div>
-          <div className="flex flex-col md:flex-row gap-8">
+          <div className="flex flex-col md:flex-row gap-6 sm:gap-8">
             <div className="md:w-1/2">
               <form className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -508,10 +508,10 @@ const HomePage = () => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#3a050a] text-white py-12 px-4 md:px-8 lg:px-16">
+      <footer className="bg-[#3a050a] text-white py-8 sm:py-12 px-4 sm:px-6 md:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between gap-8">
-            <div className="md:w-1/3">
+          <div className="flex flex-col sm:flex-row md:flex-row justify-between gap-6 sm:gap-8">
+            <div className="sm:w-1/2 md:w-1/3">
               <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 border border-white/20 inline-block mb-4">
                 <img
                   src="https://storage.googleapis.com/tempo-image-previews/github%7C153092835-1754057017173-image.png"

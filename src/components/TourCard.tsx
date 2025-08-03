@@ -86,28 +86,28 @@ const TourCard = ({
         </div>
       </div>
 
-      <CardContent className="flex-grow p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#6B1D1D] transition-colors">
+      <CardContent className="flex-grow p-4 sm:p-6">
+        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2 sm:mb-3 group-hover:text-[#6B1D1D] transition-colors leading-tight">
           {title}
         </h3>
-        <p className="text-gray-600 text-sm mb-4 leading-relaxed line-clamp-3">
+        <p className="text-gray-600 text-sm mb-3 sm:mb-4 leading-relaxed line-clamp-3">
           {description}
         </p>
 
-        <div className="space-y-3 mb-4">
+        <div className="space-y-2 sm:space-y-3 mb-3 sm:mb-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center text-gray-500 text-sm">
-              <Clock className="h-4 w-4 mr-2 text-[#6B1D1D]" />
+            <div className="flex items-center text-gray-500 text-xs sm:text-sm">
+              <Clock className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 text-[#6B1D1D]" />
               <span className="font-medium">{duration}</span>
             </div>
-            <div className="flex items-center text-gray-500 text-sm">
-              <Users className="h-4 w-4 mr-2 text-[#6B1D1D]" />
+            <div className="flex items-center text-gray-500 text-xs sm:text-sm">
+              <Users className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 text-[#6B1D1D]" />
               <span className="font-medium">{groupSize}</span>
             </div>
           </div>
 
-          <div className="flex items-center text-gray-500 text-sm">
-            <MapPin className="h-4 w-4 mr-2 text-[#6B1D1D]" />
+          <div className="flex items-center text-gray-500 text-xs sm:text-sm">
+            <MapPin className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2 text-[#6B1D1D]" />
             <span className="font-medium">{location}</span>
           </div>
         </div>
@@ -134,15 +134,15 @@ const TourCard = ({
         </div>
       </CardContent>
 
-      <CardFooter className="p-6 pt-0 flex items-center justify-between border-t border-gray-100">
+      <CardFooter className="p-4 sm:p-6 pt-0 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 sm:gap-0 border-t border-gray-100">
         <div className="flex flex-col">
-          <span className="text-sm text-gray-500">Starting from</span>
-          <div className="text-2xl font-bold text-[#6B1D1D]">{price}</div>
+          <span className="text-xs sm:text-sm text-gray-500">Starting from</span>
+          <div className="text-xl sm:text-2xl font-bold text-[#6B1D1D]">{price}</div>
           <span className="text-xs text-gray-500">per person</span>
         </div>
         <Button
           onClick={handleViewDetails}
-          className="bg-[#6B1D1D] hover:bg-[#5A1818] text-white px-6 py-3 rounded-xl font-semibold transition-all duration-300 hover:shadow-lg"
+          className="bg-[#6B1D1D] hover:bg-[#5A1818] text-white px-4 sm:px-6 py-2 sm:py-3 rounded-lg sm:rounded-xl font-semibold transition-all duration-300 hover:shadow-lg text-sm sm:text-base w-full sm:w-auto"
         >
           View Details
         </Button>

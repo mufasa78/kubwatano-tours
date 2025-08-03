@@ -1,0 +1,236 @@
+/* Mobile-First Responsive Utilities for Kubwa Tano Tours */
+
+/* Base mobile styles */
+@media (max-width: 640px) {
+  /* Ensure proper touch targets */
+  button, a, input, textarea, select {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Improve text readability on mobile */
+  body {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  /* Prevent horizontal scroll */
+  html, body {
+    overflow-x: hidden;
+  }
+  
+  /* Optimize form inputs for mobile */
+  input, textarea, select {
+    font-size: 16px; /* Prevents zoom on iOS */
+    padding: 12px 16px;
+  }
+  
+  /* Better spacing for mobile cards */
+  .tour-card {
+    margin-bottom: 16px;
+  }
+  
+  /* Mobile-optimized hero text */
+  .hero-title {
+    font-size: clamp(1.75rem, 5vw, 2.5rem);
+    line-height: 1.2;
+  }
+  
+  .hero-subtitle {
+    font-size: clamp(1rem, 3vw, 1.25rem);
+    line-height: 1.4;
+  }
+  
+  /* Mobile navigation improvements */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+  }
+  
+  /* Improved mobile buttons */
+  .mobile-cta {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 18px;
+    font-weight: 600;
+  }
+  
+  /* Mobile-friendly image containers */
+  .mobile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  /* Better mobile grid layouts */
+  .mobile-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  
+  /* Mobile testimonial cards */
+  .testimonial-mobile {
+    padding: 20px;
+    margin: 0 16px;
+    border-radius: 16px;
+  }
+  
+  /* Mobile contact form */
+  .contact-form-mobile {
+    padding: 24px 16px;
+  }
+  
+  .contact-form-mobile input,
+  .contact-form-mobile textarea {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+
+/* Tablet styles */
+@media (min-width: 641px) and (max-width: 1024px) {
+  .tablet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  
+  .tablet-hero-title {
+    font-size: clamp(2.5rem, 6vw, 3.5rem);
+  }
+  
+  .tablet-section-padding {
+    padding: 48px 32px;
+  }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 1025px) {
+  .desktop-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  
+  .desktop-hero-title {
+    font-size: clamp(3.5rem, 8vw, 5rem);
+  }
+  
+  .desktop-section-padding {
+    padding: 80px 64px;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .high-contrast {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .dark-mode-text {
+    color: #f8fafc;
+  }
+  
+  .dark-mode-bg {
+    background-color: #1e293b;
+  }
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .print-friendly {
+    background: white !important;
+    color: black !important;
+  }
+}
+
+/* Utility classes for responsive design */
+.responsive-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (min-width: 640px) {
+  .responsive-container {
+    padding: 0 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .responsive-container {
+    padding: 0 32px;
+  }
+}
+
+/* Mobile-first typography scale */
+.text-responsive-xs { font-size: clamp(0.75rem, 2vw, 0.875rem); }
+.text-responsive-sm { font-size: clamp(0.875rem, 2.5vw, 1rem); }
+.text-responsive-base { font-size: clamp(1rem, 3vw, 1.125rem); }
+.text-responsive-lg { font-size: clamp(1.125rem, 3.5vw, 1.25rem); }
+.text-responsive-xl { font-size: clamp(1.25rem, 4vw, 1.5rem); }
+.text-responsive-2xl { font-size: clamp(1.5rem, 5vw, 2rem); }
+.text-responsive-3xl { font-size: clamp(1.875rem, 6vw, 2.5rem); }
+.text-responsive-4xl { font-size: clamp(2.25rem, 7vw, 3rem); }
+.text-responsive-5xl { font-size: clamp(3rem, 8vw, 4rem); }
+
+/* Responsive spacing utilities */
+.space-responsive-sm { margin: clamp(0.5rem, 2vw, 1rem); }
+.space-responsive-md { margin: clamp(1rem, 3vw, 1.5rem); }
+.space-responsive-lg { margin: clamp(1.5rem, 4vw, 2rem); }
+.space-responsive-xl { margin: clamp(2rem, 5vw, 3rem); }
+
+/* Mobile-optimized animations */
+@keyframes mobileSlideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes mobileFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-slide-in {
+  animation: mobileSlideIn 0.3s ease-out;
+}
+
+.mobile-fade-in {
+  animation: mobileFadeIn 0.4s ease-out;
+}

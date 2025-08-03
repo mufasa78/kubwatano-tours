@@ -57,7 +57,7 @@ const Booking = () => {
         keywords="book Kenya safari, luxury safari booking, Maasai Mara tours, Kenya wildlife adventures"
       />
       {/* Header */}
-      <div className="bg-gradient-to-r from-[#5c0811] to-[#8B0000] text-white py-8 px-4 sm:px-6 lg:px-8">
+      <div className="bg-gradient-to-r from-[#5c0811] to-[#8B0000] text-white py-6 sm:py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <Button
             onClick={() => navigate("/")}
@@ -67,17 +67,17 @@ const Booking = () => {
             <ArrowLeft className="h-4 w-4 mr-2" />
             Back to Home
           </Button>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4">
             Book Your Safari Adventure
           </h1>
-          <p className="text-xl max-w-3xl">
+          <p className="text-base sm:text-lg md:text-xl max-w-3xl">
             Start your journey to Kenya's most spectacular destinations
           </p>
         </div>
       </div>
 
       {/* Main Content */}
-      <div className="max-w-4xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-4xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
           {/* Booking Form */}
           <div className="lg:col-span-2">

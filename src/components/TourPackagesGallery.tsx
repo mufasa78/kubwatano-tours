@@ -106,12 +106,12 @@ const TourPackagesGallery = () => {
       : tours.filter((tour) => tour.category === activeCategory);
 
   return (
-    <div className="w-full max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 bg-white">
-      <div className="text-center mb-12">
-        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+    <div className="w-full max-w-7xl mx-auto py-8 sm:py-12 lg:py-16 px-4 sm:px-6 lg:px-8 bg-white">
+      <div className="text-center mb-8 sm:mb-12">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-3 sm:mb-4">
           Explore Our Tour Packages
         </h2>
-        <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+        <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-2">
           Discover our carefully curated selection of luxury, cultural, and
           adventure experiences across Kenya and beyond.
         </p>
@@ -122,24 +122,24 @@ const TourPackagesGallery = () => {
         className="w-full"
         onValueChange={setActiveCategory}
       >
-        <TabsList className="grid grid-cols-4 mb-8 w-full max-w-2xl mx-auto">
-          <TabsTrigger value="all" className="text-sm md:text-base">
+        <TabsList className="grid grid-cols-2 sm:grid-cols-4 mb-6 sm:mb-8 w-full max-w-2xl mx-auto gap-1 sm:gap-0">
+          <TabsTrigger value="all" className="text-xs sm:text-sm md:text-base px-2 sm:px-4">
             All Tours
           </TabsTrigger>
-          <TabsTrigger value="luxury" className="text-sm md:text-base">
+          <TabsTrigger value="luxury" className="text-xs sm:text-sm md:text-base px-2 sm:px-4">
             Luxury
           </TabsTrigger>
-          <TabsTrigger value="culture" className="text-sm md:text-base">
+          <TabsTrigger value="culture" className="text-xs sm:text-sm md:text-base px-2 sm:px-4">
             Cultural
           </TabsTrigger>
-          <TabsTrigger value="adventure" className="text-sm md:text-base">
+          <TabsTrigger value="adventure" className="text-xs sm:text-sm md:text-base px-2 sm:px-4">
             Adventure
           </TabsTrigger>
         </TabsList>
 
         {["all", "luxury", "culture", "adventure"].map((tabValue) => (
           <TabsContent key={tabValue} value={tabValue} className="mt-0">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               {filteredTours.map((tour) => (
                 <TourCard
                   key={tour.id}

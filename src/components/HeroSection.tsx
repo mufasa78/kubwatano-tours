@@ -29,7 +29,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     }
   };
   return (
-    <div className="relative h-[100vh] min-h-[600px] w-full overflow-hidden bg-black">
+    <div className="relative h-[100vh] min-h-[500px] sm:min-h-[600px] w-full overflow-hidden bg-black">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <OptimizedImage
@@ -49,26 +49,26 @@ const HeroSection: React.FC<HeroSectionProps> = ({
 
       {/* Logo */}
       <motion.div 
-        className="absolute top-8 left-8 z-10"
+        className="absolute top-4 left-4 sm:top-8 sm:left-8 z-10"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
       >
         <motion.div 
-          className="bg-white/10 backdrop-blur-sm rounded-2xl p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
+          className="bg-white/10 backdrop-blur-sm rounded-xl sm:rounded-2xl p-2 sm:p-3 border border-white/20 hover:bg-white/20 transition-all duration-300"
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
           <img
             src="https://storage.googleapis.com/tempo-image-previews/github%7C153092835-1754057017173-image.png"
             alt="Kubwa Tano Tours Logo"
-            className="h-12 w-12 rounded-xl object-cover"
+            className="h-8 w-8 sm:h-12 sm:w-12 rounded-lg sm:rounded-xl object-cover"
           />
         </motion.div>
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center text-white">
+      <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 sm:px-6 lg:px-8 text-center text-white">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
@@ -76,7 +76,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           className="max-w-4xl mx-auto"
         >
           <motion.h1 
-            className="mb-4 text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight"
+            className="mb-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.5 }}
@@ -90,7 +90,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             transition={{ duration: 0.8, delay: 0.8 }}
           />
           <motion.h2 
-            className="mb-8 text-xl md:text-2xl lg:text-3xl font-medium"
+            className="mb-6 sm:mb-8 text-lg sm:text-xl md:text-2xl lg:text-3xl font-medium"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.0 }}
@@ -98,7 +98,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             {subtitle}
           </motion.h2>
           <motion.p 
-            className="mb-10 max-w-2xl mx-auto text-lg md:text-xl leading-relaxed"
+            className="mb-8 sm:mb-10 max-w-2xl mx-auto text-base sm:text-lg md:text-xl leading-relaxed px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 1.2 }}
@@ -113,7 +113,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
           >
             <Button
               onClick={handleCtaClick}
-              className="bg-[#8B0000] hover:bg-[#6B0000] hover:scale-105 px-10 py-6 text-lg md:text-xl rounded-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform"
+              className="bg-[#8B0000] hover:bg-[#6B0000] hover:scale-105 px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-6 text-base sm:text-lg md:text-xl rounded-lg sm:rounded-xl font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl transform"
             >
               {ctaText}
             </Button>
